@@ -53,7 +53,6 @@ export const auth = (email,password,isSignUp) => {
     }
     axios.post(url, authData)
       .then(response => {
-        console.log(response);
         const token = response.data.idToken;
         const userId = response.data.localId;
         const expTime = response.data.expiresIn
